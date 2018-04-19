@@ -1,0 +1,13 @@
+#tree{
+	width: 800px;
+	height: 550px;
+	background-color: gray;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+#time{
+	width: 600px;
+	height: 150px;
+	background: #eee;
+	margin: 0 auto;
+}
