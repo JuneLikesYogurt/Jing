@@ -3,24 +3,31 @@
 <head>
 	<meta charset="UTF-8">
 	<title>login</title>
-	<link rel="stylesheet" type="text/css" href="jingtop.css">
-	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="css/jingtop.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
 	<div id="header">
-		<a href="#">账户</a>
-		<a href="#">设置</a>
+		<div id="control">
+			<a href="achieve.html">account</a>
+			<a href="#">setting</a>
+		</div>
 	</div>
 	<div id="center">
-	<div class="input">
-	<img src="zhanghu.png">
-	    <input type="text" class="blank" name="username" value="" placeholder="账号"/>
-	</div>
-	<div class="input">
-	<img src="mima.png">
-	    <input type="password" class="blank" name="password" placeholder="密码"/>
-	</div>
-		<input type="submit" value="Login" id="submit">
-	</div>
+		<form>
+		<div class="input">
+		<img src="picture/zhanghu.png">
+		    <input type="text" class="blank" name="username" value=""/>
+		</div>
+		<div class="input">
+		<img src="picture/mima.png">
+		    <input type="password" class="blank" name="password"/>
+		</div>
+		<div id="logSub">
+			<a href="#"><input type="submit" value="Login" id="submit"></a>
+			<a href="register.html"><input type="submit" value="Register" id="submit"></a>	
+		</div>
+		</form>
+	</div>	
 </body>
 </html>

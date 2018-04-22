@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+#header{
+	width: 100%;
+	height: 60px;
+	border-bottom: solid 1px #000;
+	margin-bottom: 100px;
+}
+#control {
+	position: absolute;
+	right: 0;
+	width: 18%;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#control a{
+	height: 60px;
+	line-height: 60px;
+	/*float: right;*/
+	width: auto;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+}
+#control a:hover{
+	color: gray;
+}
