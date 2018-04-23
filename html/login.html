@@ -3,29 +3,31 @@
 <head>
 	<meta charset="UTF-8">
 	<title>login</title>
-	<link rel="stylesheet" type="text/css" href="css/jingtop.css">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/jingtop.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
 </head>
 <body>
 	<div id="header">
 		<div id="control">
-			<a href="#">account</a>
+			<a href="achieve.html">account</a>
 			<a href="#">setting</a>
 		</div>
 	</div>
 	<div id="center">
+		<form action="register.html">
 		<div class="input">
-		<img src="picture/zhanghu.png">
+		<img src="../picture/zhanghu.png">
 		    <input type="text" class="blank" name="username" value=""/>
 		</div>
 		<div class="input">
-		<img src="picture/mima.png">
+		<img src="../picture/mima.png">
 		    <input type="password" class="blank" name="password"/>
 		</div>
 		<div id="logSub">
-			<input type="submit" value="Login" id="submit">
-			<input type="submit" value="Register" id="submit">	
+			<input type="submit" value="Login" class="submit">
+			<input type="button" value="Register" class="submit" onclick="window.location.href='register.html'">
 		</div>
+		</form>
 	</div>	
 </body>
 </html>

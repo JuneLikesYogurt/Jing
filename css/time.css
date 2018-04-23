@@ -1,13 +1,22 @@
 #tree{
-	width: 800px;
-	height: 550px;
-	background-color: gray;
-	margin: 0 auto;
-	margin-bottom: 50px;
+    width: 500px;
+    height: 300px;
+    background-color: #eee;
+    margin: 0 auto;
+    margin-top: -50px;
+    margin-bottom: 50px;
 }
 #time{
-	width: 600px;
-	height: 150px;
-	background: #eee;
-	margin: 0 auto;
+  margin: 0 auto;
+  height: 50px;
+  width: 260px;
+  text-align: center;
+  font-size: 50px;
+  line-height: 50px;
+  /*background-color: #ccc;
+  border-width: 0.1em;
+  border-color: #eee;*/
+  box-sizing: content-box;
+  border-bottom: solid; 
+  color: black;
 }
