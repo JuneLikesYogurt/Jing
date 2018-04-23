@@ -5,6 +5,14 @@
 	<title>register</title>
 	<link rel="stylesheet" type="text/css" href="css/jingtop.css">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<style type="text/css">
+		.input{
+			height: 80px;
+		}
+		.input input.blank{
+			margin-top: 30px;
+		}
+	</style>
 </head>
 <body>
 	<div id="header">
@@ -14,16 +22,21 @@
 		</div>
 	</div>
 	<div id="center">
-	<form>
+	<form action="Jing.html">
 		<div class="input">
 		<img src="picture/zhanghu.png">
 		    <input type="text" class="blank" name="username" value=""/>
 		</div>
+
 		<div class="input">
 		<img src="picture/mima.png">
 		    <input type="password" class="blank" name="password"/>
 		</div>
-		<div id="logSub">
+		<div class="input">
+		<img src="picture/again.png">
+		    <input type="password" class="blank" name="password"/>
+		</div>
+		<div id="logSub" style="margin-top: 100px;">
 			<input type="submit" value="Register" id="submit">	
 		</div>
 		</form>
