@@ -1,23 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>time</title>
-	<script type="text/javascript" src="js/time.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/jingtop.css">
-	<link rel="stylesheet" type="text/css" href="../css/time.css">
+    <meta charset="UTF-8">
+    <title>time</title>
+    <!-- <script type="text/javascript" src="js/resetTime.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="../css/jingtop.css">
+    <link rel="stylesheet" type="text/css" href="../css/time.css">
+
+    <script type="text/javascript">
+		window.onbeforeunload = function () {
+			return false;
+		}
+	</script>
+    <!-- <script type="text/javascript">
+    var date = new Date();
+    var startTime = date.getTime();
+    var limitTimes = 10;
+    var endTime = (startTime.setMinutes(startTime.getMinutes() + limitTimes));
+    var surplusTimes = endTime.getTime() / 1000 - startTime.getTime() / 1000;
+
+    countDown = window.setInterval(function() {
+        surplusTimes--;
+        var minute = Math.floor(surplusTimes / 60);
+        var second = Math.round(surplusTimes % 60);
+        console.log(minute + ":" + second);
+        if (surplusTimes <= 0) {
+            console.log('时间到！');
+            clearInterval(countDown);
+        }
+    }, 1000)
+    </script> -->
+
+    <script type="text/javascript">
+        var maxtime = 0.1 * 60; //一个小时，按秒计算，自己调整!   
+            function CountDown() {
+                if (maxtime >= 0) {
+                    minutes = Math.floor(maxtime / 60);
+                    seconds = Math.floor(maxtime % 60);
+                    msg = minutes + ":" + seconds;
+                    document.all["time"].innerHTML = msg;
+                    if( maxtime == 0) {
+                        alert("success！");
+                    }
+                    maxtime--;
+                } else{
+                    clearInterval(timer);
+                    alert("时间到，结束!");
+                }
+            }
+            time = setInterval("CountDown()", 1000);       
+    </script>
 </head>
-<body onload="resetTime()">
-	<div id="header">
-		<div id="control">
-			<a href="achieve.html">account</a>
-			<a href="#">setting</a>
-		</div>
-	</div>
-	<div id="tree">
-		tree
-	</div>
-	<div id="time"></div>
-	
+
+<body>
+    <div id="header">
+        <div id="control">
+            <a href="achieve.html">account</a>
+            <a href="#">setting</a>
+        </div>
+    </div>
+    <div id="tree">
+        tree
+    </div>
+    <div id="time"></div>
 </body>
+
 </html>
