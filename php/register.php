@@ -3,8 +3,8 @@ include("connect.php");
 $conn=@mysqli_connect("localhost","root","123456","wxjingjing")or die("连接错误");
 $sql="select * from user where username like '$_POST[username]'";
 $sql1="use wxjingjing";
-$sql2="insert into user (username,password,rtime)".
-        "values('$_POST[username]','$_POST[password]','2001-01-01')";
+$sql2="insert into user (username,password)".
+        "values('$_POST[username]','$_POST[password]')";
 if (isset($_POST["submit"]))
 {
     $username=empty($_POST['username'])?'':$_POST['username'];
@@ -18,19 +18,18 @@ if (isset($_POST["submit"]))
   }
   else{
     mysql_query($sql1);
-    $re=mysql_query($sql);
-    if(!empty($re)){
-      echo "<script>alert('用户名存在'); exit();</script>";
-    }
+    $query=mysql_query($sql); 
+    $rows = mysql_num_rows($query);
+    var_dump($rows); 
+    if($rows > 0){ 
+      echo "<script type='text/javascript'>alert('用户名已存在');location='javascript:history.back()';</script>"; 
+     }
     else{
       $array=mysql_query($sql2) /*or die(mysql_error())*/;
       if(!empty($array)){
         SESSION_start();
         $_SESSION['username']=$username;
        echo "<script>alert('注册成功');location.href='register.php'</script>";
-        }
-        else{
-          echo "<script>alert('注册失败');location.href='register.php'</script>";
         }
     }
     
