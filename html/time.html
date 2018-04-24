@@ -11,34 +11,13 @@
     <script type="text/javascript">
 		window.onbeforeunload = function () {
 			return false;
-		}
-	</script>
-    <!-- <script type="text/javascript">
-    var date = new Date();
-    var startTime = date.getTime();
-    var limitTimes = 10;
-    var endTime = (startTime.setMinutes(startTime.getMinutes() + limitTimes));
-    var surplusTimes = endTime.getTime() / 1000 - startTime.getTime() / 1000;
-
-    countDown = window.setInterval(function() {
-        surplusTimes--;
-        var minute = Math.floor(surplusTimes / 60);
-        var second = Math.round(surplusTimes % 60);
-        console.log(minute + ":" + second);
-        if (surplusTimes <= 0) {
-            console.log('时间到！');
-            clearInterval(countDown);
-        }
-    }, 1000)
-    </script> -->
-
-    <script type="text/javascript">
-        var maxtime = 0.1 * 60; //一个小时，按秒计算，自己调整!   
+		};
+        var maxtime = 60 * 60; //一个小时，按秒计算，自己调整!   
             function CountDown() {
                 if (maxtime >= 0) {
                     minutes = Math.floor(maxtime / 60);
                     seconds = Math.floor(maxtime % 60);
-                    msg = minutes + ":" + seconds;
+                    msg = minutes + " : " + seconds;
                     document.all["time"].innerHTML = msg;
                     if( maxtime == 0) {
                         alert("success！");
@@ -57,9 +36,12 @@
     <div id="header">
         <div id="control">
             <a href="achieve.html">account</a>
-            <a href="#">setting</a>
         </div>
     </div>
+    <div class="slogan">
+        <span>Be happy for this moment. This moment is your life.</span>
+    </div>
+    
     <div id="tree">
         tree
     </div>

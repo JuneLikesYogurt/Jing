@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>register</title>
-	<link rel="stylesheet" type="text/css" href="../css/jingtop.css">
-	<link rel="stylesheet" type="text/css" href="../css/login.css">
-	<style type="text/css">
-		.input{
-			height: 80px;
-		}
-		.input input.blank{
-			margin-top: 30px;
-		}
-	</style>
-<!-- 	<script type="text/javascript">
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link rel="stylesheet" type="text/css" href="../css/jingtop.css">
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
+    <!-- 	<script type="text/javascript">
 		function submitRegister () {
 			if(document.register.username.value.length == 0) {
 				alert("请输入用户名!");
@@ -34,33 +27,37 @@
 		}
 	</script> -->
 </head>
-<body>
-	<div id="header">
-		<div id="control">
-			<a href="achieve.html">account</a>
-			<a href="#">setting</a>
-		</div>
-	</div>
-	<div class="center">
-		<form name="register" action="Jing.html" method="post">
-			<div class="input">
-			<img src="../picture/zhanghu.png">
-			    <input type="text" class="blank" name="username" value=""/>
-			</div>
 
-			<div class="input">
-			<img src="../picture/mima.png">
-			    <input type="password" class="blank" name="password" id="ps" />
-			</div>
-			<div class="input">
-			<img src="../picture/again.png">
-			    <input type="password" class="blank" name="password" id="checkPS" />
-			</div>
-			<div id="logSub" style="margin-top: 100px;">
-				<!-- <input type="button" value="提交" onclick="submitRegister()"> -->
-				<input type="submit" value="Register" class="submit">	
-			</div>
-		</form>
-	</div>
+<body>
+    <div id="header">
+        <div id="control">
+            <a href="achieve.html">account</a>
+        </div>
+    </div>
+    <div class="slogan">
+        <span>Be happy for this moment. This moment is your life.</span>
+    </div>
+    <div class="center">
+        <form name="register" action="Jing.html" method="post">
+            <div class="input">
+                <img src="../picture/zhanghu.png">
+                <input type="text" class="blank" name="username" value="" />
+            </div>
+            <div class="input">
+                <img src="../picture/mima.png">
+                <input type="password" class="blank" name="password" id="ps" />
+            </div>
+            <div class="input">
+                <img src="../picture/again.png">
+                <input type="password" class="blank" name="repassword" id="checkPS" />
+            </div>
+
+            <div id="regSub">
+                <!-- <input type="button" value="提交" onclick="submitRegister()"> -->
+                <input type="submit" value="REGISTER" class="submit">
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>

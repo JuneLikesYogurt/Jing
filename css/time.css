@@ -1,22 +1,24 @@
 #tree{
-    width: 500px;
-    height: 300px;
+    width: 800px;
+    height: 400px;
     background-color: #eee;
     margin: 0 auto;
-    margin-top: -50px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 #time{
-  margin: 0 auto;
   height: 50px;
-  width: 260px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 80px;
+
+  box-sizing: content-box;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #000; 
+  color: black;
+
   text-align: center;
   font-size: 50px;
   line-height: 50px;
-  /*background-color: #ccc;
-  border-width: 0.1em;
-  border-color: #eee;*/
-  box-sizing: content-box;
-  border-bottom: solid; 
-  color: black;
+  letter-spacing: 10px;
 }

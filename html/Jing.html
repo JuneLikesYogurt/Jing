@@ -3,15 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Jing</title>
-	<script type="text/javascript" src="../js/now.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/jingtop.css">
-	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/Jing.css">
+	<script type="text/javascript">
+		window.onload = function () {
+			setInterval(function () {
+				//创建Date对象
+			    var today = new Date();
+			    var hours = today.getHours();
+			    var minutes = today.getMinutes();
+			    var seconds = today.getSeconds();
+			    //如果是单个数，则前面补0
+			    hours = hours < 10 ? "0" + hours : hours;
+			    minutes = minutes < 10 ? "0" + minutes : minutes;
+			    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+			    //构建要输出的字符串
+			    var str = hours + " : " + minutes + " : " + seconds;
+
+			    //获取id=result的对象
+			    var obj = document.getElementById("now");
+			    //将str的内容写入到id=result的<div>中去
+			    obj.innerHTML = str;
+			})
+		}
+	</script>
 </head>
-<body onload="showNow()">
+<body>
 	<div id="header">
 		<div id="control">
 			<a href="achieve.html">account</a>
-			<a href="#">setting</a>
 		</div>
 	</div>
 	<div class="slogan">
@@ -19,7 +40,7 @@
 	</div>
 	<div id="now"></div>
 	<div id="start">
-		<a href="time.html">START</a>
+		<a href="select.html">START</a>
 	</div>
 </body>
 </html>
