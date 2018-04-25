@@ -45,7 +45,7 @@ $conn=@mysqli_connect("localhost","root","123456","wxjingjing")or die("连接错
 	</div>
 	<div id="now"></div>
 	<div id="start">
-		<a href="select.html">START</a>
+		<a href="select.php">START</a>
 	</div>
 </body>
 </html>
