@@ -27,7 +27,7 @@
                     clearInterval(timer);
                     alert("时间到，结束!");
                 }
-            }
+            } 
             time = setInterval("CountDown()", 1000);       
     </script>
 </head>
