@@ -16,7 +16,17 @@ if(isset($_POST["submit"]))
 	// $row=mysql_fetch_array($query1);
 	// $uid=$row['uid'];
     $query2=mysql_query($sql2);
-    header("Location:time.php");
+    if($_POST["selectModel"]=='sit')
+    {
+        header("Location:sitting.php");
+    }else if($_POST["selectModel"]=='grow')
+    {
+        header("Location:tree.php");
+    }else if($_POST["selectModel"]=='breed')
+    {
+        header("Location:live.php");
+    }
+    
     // var_dump($sql2);
     // var_dump($uid);
 }
@@ -44,8 +54,8 @@ if(isset($_POST["submit"]))
                 <label>CHOOSE：</label>
                 <select name="selectModel">
                     <option value="sit" selected="selected" name="sit">SITTING</option>
-                    <option value="breed" name="breed">养猪</option>
-                    <option value="grow" name="grow">PLANTING</option>
+                    <option value="breed" name="breed">LIVE</option>
+                    <option value="grow" name="grow">TREE</option>
                 </select>
             </div>
             <div class="modelSelect">

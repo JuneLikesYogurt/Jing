@@ -63,7 +63,7 @@ mysql_query($sql2);
     </div>
     
     <div id="tree">
-        tree
+       <img src="../picture/kyle-brumm-384361-unsplash.jpg">
     </div>
     <div id="time"></div>
 </body>
