@@ -20,7 +20,7 @@ if (isset($_POST["submit"]))
     mysql_query($sql1);
     $query=mysql_query($sql); 
     $rows = mysql_num_rows($query);
-    var_dump($rows); 
+    //var_dump($rows); 
     if($rows > 0){ 
       echo "<script type='text/javascript'>alert('用户名已存在');location=location.href='register.php';</script>"; 
      }
@@ -29,7 +29,7 @@ if (isset($_POST["submit"]))
       if(!empty($array)){
         SESSION_start();
         $_SESSION['username']=$username;
-       echo "<script>alert('注册成功');location.href='register.php'</script>";
+       echo "<script>alert('注册成功');location.href='login.php'</script>";
         }
     }
     
@@ -69,7 +69,7 @@ if (isset($_POST["submit"]))
 <body>
     <div id="header">
         <div id="control">
-            <a href="achieve.php">account</a>
+            <a href="account.php">account</a>
         </div>
     </div>
     <div class="slogan">

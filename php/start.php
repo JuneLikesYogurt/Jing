@@ -9,7 +9,7 @@ $conn=@mysqli_connect("localhost","root","123456","wxjingjing")or die("连接错
 	<meta charset="UTF-8">
 	<title>Jing</title>
 	<link rel="stylesheet" type="text/css" href="../css/jingtop.css">
-	<link rel="stylesheet" type="text/css" href="../css/Jing.css">
+	<link rel="stylesheet" type="text/css" href="../css/start.css">
 	<script type="text/javascript">
 		window.onload = function () {
 			setInterval(function () {
@@ -37,7 +37,7 @@ $conn=@mysqli_connect("localhost","root","123456","wxjingjing")or die("连接错
 <body>
 	<div id="header">
 		<div id="control">
-			<a href="achieve.html">account</a>
+			<a href="account.php">account</a>
 		</div>
 	</div>
 	<div class="slogan">

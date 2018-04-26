@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
 	   
 		if(!empty($array)){
 			if(isset($_SESSION['username'])&&!empty($_SESSION['username'])){
-				echo "<script>alert('登录成功');location.href='Jing.php'</script>";
+				echo "<script>alert('登录成功');location.href='start.php'</script>";
 			}
 		}
 		else{
@@ -58,7 +58,7 @@ function Checklogin()
 <body>
 	<div id="header">
 		<div id="control">
-			<a href="achieve.php">account</a>
+			<a href="account.php">account</a>
 		</div>
 	</div>
 	<div class="slogan">
