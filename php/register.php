@@ -69,7 +69,7 @@ if (isset($_POST["submit"]))
 <body>
     <div id="header">
         <div id="control">
-            <a href="account.php">account</a>
+            <!-- <a href="account.php">account</a> -->
         </div>
     </div>
     <div class="slogan">
