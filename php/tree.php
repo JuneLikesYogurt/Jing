@@ -1,6 +1,6 @@
 <?php
-include("connect.php");
-$conn=@mysqli_connect("localhost","root","123456","wxjingjing")or die("连接错误");
+// include("connect.php");
+// $conn=@mysqli_connect("localhost","root","123456","wxjingjing")or die("连接错误");
 session_start();
 $sql="use wxjingjing";
 $sql1="select time from data where uid =(select uid from user where username like '$_SESSION[username]')order by did desc limit 1";
@@ -25,11 +25,11 @@ mysql_query($sql2);
     <!-- <script type="text/javascript" src="js/resetTime.js"></script> -->
     <link rel="stylesheet" type="text/css" href="../css/jingtop.css">
     <link rel="stylesheet" type="text/css" href="../css/time.css">
-
-    <script type="text/javascript">
-		window.onbeforeunload = function () {
-			return false;
-		};
+    <<?php 
+        echo "<script type="text/javascript">
+        window.onbeforeunload = function () {
+            return false;
+        };
         var maxtime = <?php echo $time;?> * 60; //一个小时，按秒计算，自己调整!   
         var flag = 0; //flag 标记计时是否成功 
             function CountDown() {
@@ -49,7 +49,9 @@ mysql_query($sql2);
             time = setInterval("CountDown()", 1000);
             // document.cookie = flag;    
             document.cookie="flag="+flag;       
-    </script>
+    </script>";
+     ?>
+    
 </head>
 
 <body>
