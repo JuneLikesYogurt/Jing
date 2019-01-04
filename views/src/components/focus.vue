@@ -42,7 +42,7 @@ export default {
             }
 
             document.body.onclick = function () {
-                alert("专注失败a");
+                alert("专注失败");
                 self.$router.push({ 
                     path: '/start',
                     query: {

@@ -14,13 +14,19 @@ export default {
     methods: {
         click() {
             let self = this;
-            document.body.addEventListener('click', function() {
-                self.$router.push({
-                    path: 'login'
-                })
-            })
+            document.body.onclick = function () {
+                self.$router.push({ 
+                    path: '/login'
+                });
+            }
         }
-    }
+        
+    },
+
+     beforeDestroy() {
+         document.body.onclick = "";
+     }
+
 }
 </script>
 
