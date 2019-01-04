@@ -32,7 +32,7 @@ export default {
             let uid = this.$route.query.uid;
             
             document.body.onmouseleave = function () {   
-                alert("专注失败a");
+                alert("专注失败");
                 self.$router.push({ 
                     path: '/start',
                     query: {
